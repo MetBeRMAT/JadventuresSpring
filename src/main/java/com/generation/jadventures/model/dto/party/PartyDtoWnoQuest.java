@@ -1,17 +1,14 @@
-package com.generation.jadventures.model.dto.guild;
+package com.generation.jadventures.model.dto.party;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 @Data
 @AllArgsConstructor
 
-
-public class GuildDtoR extends GuildDtoBase
+public class PartyDtoWnoQuest   extends PartyDtoBase
 {
-    public GuildDtoR(){}
     private Integer id;
 }

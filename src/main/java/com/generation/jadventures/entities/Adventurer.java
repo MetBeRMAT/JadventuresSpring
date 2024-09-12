@@ -1,5 +1,6 @@
 package com.generation.jadventures.entities;
 
+
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -22,36 +23,19 @@ import lombok.experimental.SuperBuilder;
 @Entity
 @SuperBuilder
 
-
-public class Quest 
+public class Adventurer 
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private LocalDate date_created;
-    private String status;
+    private String name, surname;
+    private LocalDate dob;
     private String rank;
-    private int reward;
-    private String area;
-    private LocalDate date_completed;
-    private String map_url;
-    private String description;
-    private String type;
+    private String role;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "guild_id")
-    private Guild patron;
-
-    @JsonIgnore
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "party_id")
-    private Party questOfParty;
-
-    
-
-
-
-
+    @JoinColumn(name = "myparty_id")
+    private Party party;
 }

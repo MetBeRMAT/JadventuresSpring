@@ -1,4 +1,4 @@
-package com.generation.jadventures.model.dto.guild;
+package com.generation.jadventures.model.dto.party;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,9 +10,11 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @SuperBuilder
 
-public class GuildDtoBase 
+
+public class PartyDtoBase 
 {
     private String name;
-    private int n_employees;
-    private String hq_address;
+    private String authentication_seal;
+    private String motto;
+    
 }
